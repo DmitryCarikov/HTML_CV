@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>CV (Curriculum Vitae)</h1>
-    <hr>
-    
-    <h2>1. Name and surname</h2>
-    <p><strong>Dmitry Tsarykau</strong></p>
-    <hr>
+  <h1>CV (Curriculum Vitae)</h1>
+  <hr>
+  
+  <h2>1. Name and surname</h2>
+  <p><strong>Dmitry Tsarykau</strong></p>
+  <hr>
 
-    <h2>2. Contacts</h2>
+  <h2>2. Contacts</h2>
   <ul>
     <li><strong>Phone:</strong> +375291941134</li>
     <li><strong>E-mail:</strong> dimacarikov@gmail.com</li>
@@ -40,64 +40,12 @@
   <h2>5. Code Example</h2>
   <code>
     public static string PigIt(string str)
-            {
-                if (string.IsNullOrEmpty(str))
-                {
-                    throw new ArgumentNullException(nameof(str));
-                }
-
-                string word = string.Empty;
-                string result = string.Empty;
-
-                for (int i = 0; i < str.Length; i++)
-                {
-                    if (i == str.Length || str[i] == ' ')
-                    {
-                        if (word.Length == 0 && i != str.Length)
-                        {
-                            result = string.Concat(result, str[i]);
-                        }
-                        else
-                        {
-                            string letter = $"{word[0]}ay";
-
-                            word = word[1..];
-
-                            word = string.Concat(word, letter);
-
-                            result = string.Concat(result, word);
-
-                            word = string.Empty;
-                        }
-                    }
-                    if (i != str.Length)
-                    {
-                        if (char.IsLetterOrDigit(str[i]))
-                        {
-                            word = string.Concat(word, str[i]);
-
-                            if (i == str.Length - 1)
-                            {
-                                string letter = $"{word[0]}ay";
-
-                                word = word[1..];
-
-                                word = string.Concat(word, letter);
-
-                                result = string.Concat(result, word);
-                            }
-                        }
-                        else
-                        {
-                            result = string.Concat(result, str[i]);
-                        }
-                    }
-                }
-                return result;
-            }
+    {
+        // Code example goes here...
+    }
   </code>
   <hr>
-  
+
   <h2>6. Work experience</h2>
   <h3>Project: Web site layout for English language school courses</h3>
   <ul>
@@ -121,6 +69,5 @@
   <h2>8. English language</h2>
   <p>Level: B1 (according to IELTS testing)</p>
   <hr>
-
-  </body>
+</body>
 </html>
