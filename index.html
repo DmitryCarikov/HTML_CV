@@ -36,6 +36,67 @@
     <li><strong>Development tools:</strong> Visual Studio Code</li>
   </ul>
   <hr>
+
+  <h2>5. Code Example</h2>
+  <code>
+    public static string PigIt(string str)
+            {
+                if (string.IsNullOrEmpty(str))
+                {
+                    throw new ArgumentNullException(nameof(str));
+                }
+
+                string word = string.Empty;
+                string result = string.Empty;
+
+                for (int i = 0; i < str.Length; i++)
+                {
+                    if (i == str.Length || str[i] == ' ')
+                    {
+                        if (word.Length == 0 && i != str.Length)
+                        {
+                            result = string.Concat(result, str[i]);
+                        }
+                        else
+                        {
+                            string letter = $"{word[0]}ay";
+
+                            word = word[1..];
+
+                            word = string.Concat(word, letter);
+
+                            result = string.Concat(result, word);
+
+                            word = string.Empty;
+                        }
+                    }
+                    if (i != str.Length)
+                    {
+                        if (char.IsLetterOrDigit(str[i]))
+                        {
+                            word = string.Concat(word, str[i]);
+
+                            if (i == str.Length - 1)
+                            {
+                                string letter = $"{word[0]}ay";
+
+                                word = word[1..];
+
+                                word = string.Concat(word, letter);
+
+                                result = string.Concat(result, word);
+                            }
+                        }
+                        else
+                        {
+                            result = string.Concat(result, str[i]);
+                        }
+                    }
+                }
+                return result;
+            }
+  </code>
+  <hr>
   
 
   </body>
